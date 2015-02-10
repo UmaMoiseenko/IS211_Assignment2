@@ -37,7 +37,7 @@ def main():
 		try:
 			dateFormat = '%d/%m/%Y'
 			birthday = datetime.datetime.strptime(personData[id][1], dateFormat) 
-			birthday = '%s-%s-%s' % (birthday.year, birthday.month, birthday.day)
+			birthday = '%s-%02d-%02d' % (birthday.year, birthday.month, birthday.day)
 			name = personData[id][0]
 			print 'Person #%s is %s with a birthday of %s' % ( id, name, birthday)
 		except:
