@@ -26,7 +26,6 @@ def main():
 				birthday = datetime.datetime.strptime(row['birthday'], dateFormat)
 			except:
 				logger.error('Error processing line #%s for ID #%s' % (linenum, row['id']))
-				linenum+=1
 
 			result[int(row['id'])] = (row['name'], row['birthday'])
 			linenum+=1
